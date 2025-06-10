@@ -1,41 +1,391 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f2f2f2;
-    }
+ <!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
 
-    h1 {
-      color: #333;
-    }
+    <head>
 
-    .btn {
-      background-color: #007BFF;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-    }
+        <!--- basic page needs
+    ================================================== -->
+        <meta charset="utf-8">
+        <title>Let's Go Cleaning</title>
+        <meta name="description" content>
+        <meta name="author" content>
 
-    .btn:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <h1>Bem-vindo ao Meu Site!</h1>
-  <p>Clique no botão abaixo para entrar em contato:</p>
-  <a href="contact.html" class="btn">Contato</a>
-</body>
+        <!-- mobile specific metas
+    ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS
+    ================================================== -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/vendor.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- script
+    ================================================== -->
+        <script src="js/modernizr.js"></script>
+        <script src="js/pace.min.js"></script>
+
+        <!-- favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+        <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+        <!-- CSS do Owl Carousel -->
+        <link rel="stylesheet" href="path/to/owl.carousel.min.css">
+        <link rel="stylesheet" href="path/to/owl.theme.default.min.css">
+
+
+<!-- Owl Carousel Theme CSS (opcional) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+    </head>
+
+    <!-- header 
+    ================================================== -->
+    <section><header id="header">
+
+            <div class="header-logo">
+                <a href="#">
+                    <img src="../images/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <nav id="header-nav-wrap">
+                <ul class="header-main-nav">
+                    <li><a href="index.html#home" title="home">Home</a></li>
+                    <li><a href="services.html" title="about">Services</a></li>
+                    <li><a href="gallery.html" title="pricing">Gallery</a></li>
+                    <li><a href="about-us.html" title="testimonials">About
+                            Us</a></li>
+                    <li><a href="blog.html" title="download">Blog</a></li>
+                </ul>
+
+                <a href="contact.html" title="sign-up"
+                    class="button button-primary cta">Contact Us</a>
+            </nav>
+
+            <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+        </header> <!-- /header -->
+    </section>
+    <body id="top">
+
+        <!-- home
+    ================================================== -->
+        <section id="home" data-parallax="scroll"
+            data-image-src="images/hero-bg.png" data-natural-width=3000
+            data-natural-height=2000>
+
+            <div class="overlay"></div>
+            <div class="home-content">
+
+                <div class="row contents">
+                    <div class="home-content-left">
+
+                        <h3 data-aos="fade-up">Welcome</h3>
+
+                        <h1 data-aos="fade-up">
+                            We are <br>
+                            Let's Go Cleaning <br>
+                        </h1>
+
+                        <div class="buttons" data-aos="fade-up">
+                            <a href="about-us.html" title="testimonials"
+                                class="button stroke">Learn more about us</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> <!-- end home-content -->
+
+            <ul class="home-social-list">
+                <li>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100095361396702&mibextid=JRoKGi"
+                        target="_blank"><i
+                            class="fa fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lets.gocleaning/"
+                        target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+            <!-- end home-social-list -->
+
+        </section> <!-- end home -->
+
+        <!-- about
+        ================================================== -->
+        <section id="about">
+
+            <div class="row about-features">
+
+                <div
+                    class="features-list block-1-3 block-m-1-2 block-mob-full group">
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="icon"><i class="icon-home"></i></span>
+
+                        <div class="service-content">
+                            <h3>Residential cleaning</h3>
+
+                            <p>We specialize in Residential Cleaning Services
+                                that transform your home into a spotless, fresh,
+                                and comfortable haven.
+                            </p>
+                            <a class="button button-primary large"
+                                href="services.html">Read more</a>
+
+                        </div>
+
+                    </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="icon"><i class="icon-building"></i></span>
+
+                        <div class="service-content">
+                            <h3>Commercial cleaning</h3>
+
+                            <p>We provide top-notch Commercial Cleaning Services
+                                to ensure your business environment is clean and
+                                welcoming.
+                            </p>
+                            <a class="button button-primary large"
+                                href="services.html">Read more</a>
+
+                        </div>
+
+                    </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="icon"><i class="icon-truck"></i></span>
+
+                        <div class="service-content">
+                            <h3>Moving in/out </h3>
+
+                            <p>We offer specialized Moving In/Moving Out
+                                Cleaning Services to make your transition smooth
+                                and stress-free.
+                            </p>
+                            <a class="button button-primary large"
+                                href="services.html">Read more</a>
+
+                        </div>
+
+                    </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="icon"><i class="icon-tie"></i></span>
+
+                        <div class="service-content">
+                            <h3>Organizing</h3>
+                            <p>We specialize in decluttering and creating
+                                efficient, personalized spaces that make
+                                everyday living easier and more enjoyable.
+                            </p>
+                            <a class="button button-primary large"
+                                href="services.html">Read more</a>
+
+                        </div>
+
+                    </div> <!-- /bgrid -->
+
+                </div> <!-- end features-list -->
+
+                <section id="carousel-section">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <div class="owl-carousel owl-carousel-images">
+                            <img src="images/galeria1.jpg" alt="Imagem 1">
+                            <img src="images/galeria2.jpg" alt="Imagem 2">
+                            <img src="images/galeria3.jpg" alt="Imagem 3">
+                            <img src="images/galeria4.jpg" alt="Imagem 4">
+                            <img src="images/galeria5.jpg" alt="Imagem 5">
+                            <img src="images/galeria6.jpg" alt="Imagem 6">
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="text-content">
+                        <p>At Let's Go Cleaning, we are dedicated to providing
+                            exceptional cleaning services that transform your
+                            living and working spaces into pristine
+                            environments. Our professional team is committed to
+                            delivering quality and attention to detail, ensuring
+                            every corner is spotless and inviting. Whether it's
+                            residential or commercial cleaning, we tailor our
+                            approach to meet your specific needs, helping you
+                            enjoy a clean, comfortable, and welcoming
+                            atmosphere. Explore our gallery to see the results
+                            of our hard work and dedication to cleanliness!</p>
+                        <a class="button button-primary large"
+                            href="gallery.html">View gallery</a>
+                    </div>
+                </section>
+
+                <section id="blog-section">
+                    <h1>Blog</h1> <!-- Título da seção -->
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <img src="images/carpet.jpg"
+                                alt="Description of image 1">
+                            <p><strong>Refreshing Your Carpet with Baking
+                                    Soda</strong></p>
+                            <p>Professional carpet cleaning can be a convenient
+                                option, but it’s not always budget-friendl...<a
+                                    href="blog.html" class="custom-link"> Read
+                                    more</a></p></br>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/shower.jpg"
+                            alt="Description of image 1">
+                        <p><strong>Dry Shower Doors to Avoid Spots</strong></p>
+                        <p>House cleaning is easier when you stay on top of
+                            small tasks instead of leaving everything for one
+                            bi...<a href="blog.html" class="custom-link"> Read
+                                more</a></p></br>
+                </div>
+                <div class="grid-item">
+                    <img src="images/organizing.jpg"
+                        alt="Description of image 1">
+                    <p><strong>Living Space Tidy with Simple Upkeep</strong></p>
+                    <p>While there are plenty of house cleaning tips, few
+                        emphasize the importance of regular upkeep. Kno...<a
+                            href="blog.html" class="custom-link"> Read more</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="download">
+            <div class="row">
+                <div class="col-twelve">
+                    <h1 class="intro-header" data-aos="fade-up">Feedbacks</h1>
+                </div>
+            </div>
+
+            <div id="testimonial-slider">
+                <div class="slides owl-carousel">
+                    <div>
+                            <p>Despite keeping a very clean and organized house
+                                I found myself overwhelmed by the deep cleaning
+                                needed in my new home. I have never had a house
+                                cleaner before, so I was brand new to the
+                                process of finding someone. Let's Go Cleaning
+                                had great reviews so I reached out! She was very
+                                responsiveand communicating my needs and setting
+                                up an appointment was quick and easy. To women
+                                came to do the first cleaning and were friendly,
+                                professional and made me feel comfortable having
+                                them in my home. I work from home and they were
+                                very recpectful of working around me, etc. I
+                                would highly recommend Let's Go Cleaning!</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">Kristi A.<span>Mar 30,
+                                        2023</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Our first cleaning was amazing! Looking forward
+                                to having this spectacular team continue to
+                                assist us in our journey to making our home a
+                                retreat.</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">Jay K.<span
+                                        class="position">Jan 05,
+                                        2023</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Adelia and her team always do a great job on my
+                                house. I tried a few different services when we
+                                moved here, but I choose to stick with her
+                                because I liked the ability to text her directly
+                                and the signature touches she adds with the time
+                                given. She's one of those people who's
+                                professionalism and attention to detail leaves
+                                you feeling happy you found her.</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">Angela C.<span
+                                        class="position">Jan 23,
+                                        2020</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Adelia and her team are amazing - timely,
+                                efficient, professional and trustworthy. My
+                                house is always spotless and she truly helps
+                                lessen my stress. I've recommended her to
+                                several friends who also trust and enjoy her
+                                work. It's always a treat to come home to a
+                                fresh and clean home after a busy day. Go with
+                                Adelia, she's pleasant and her work is
+                                stellar.</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">Stephanie D.<span
+                                        class="position">Nov 05,
+                                        2019</span></div>
+                            </div>
+                        </div>
+                    </div> <!-- end slides -->
+                </div> <!-- end testimonial-slider -->
+            </div> <!-- end flex-container -->
+        </section> <!-- end download -->
+
+       <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span>© Copyright Let's Go Cleaning 2024.| Design by
+                            <a href="http://www.eujuliamaia.com"
+                                target="_blank">Júlia Maia</a></span>
+                    </div>
+
+                    <div id="go-top">
+                        <a class="smoothscroll" title="Back to Top"
+                            href="#top"><i class="icon-arrow-up"></i></a>
+                    </div>
+                </div>
+
+            </div> <!-- end footer-bottom -->
+
+        </div>
+
+    </footer>
+
+        <div id="preloader"> 
+            <div id="loader"></div>
+        </div>  
+
+       <!-- Java Script
+        ================================================== -->
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/plugins.js"></script> 
+        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+
+    </body>
+
+    
 </html>

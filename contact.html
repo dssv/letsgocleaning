@@ -29,19 +29,11 @@
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "YOUR_PUBLIC_KEY",
-        });
-    })();
-    </script>
-
     <!-- favicons
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon2.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://bootswath.com/5/sandstone/bootstrap.min.css"> -->
 </head>
 
 <body id="top">
@@ -60,7 +52,7 @@
                     <li><a href="services.html" title="about">Services</a></li>
                     <li><a href="gallery.html" title="pricing">Gallery</a></li>
                     <li><a href="about-us.html" title="testimonials">About Us</a></li>
-                    <li><a class="smoothscroll"  href="#download" title="download">Blog</a></li>
+                    <li><a href="blog.html" title="download">Blog</a></li>
                 </ul>
                 <a href="contact.html" title="sign-up" class="button button-primary cta">Contact Us</a>
             </nav>
@@ -95,7 +87,7 @@
                     </ul>
                 </div>
                 <div class="contact-form">
-                    <form id="form">
+                    <form id="form" action="https://formsubmit.co/letsgocleaning.net@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required>
@@ -110,7 +102,6 @@
                         </div>
                         <button type="submit">Send Message</button>
                     </form>
-                    <script src="script.js"></script>
                     <p id="response-message"></p>
                 </div>
             </div>

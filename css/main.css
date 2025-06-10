@@ -29,817 +29,817 @@
  *
  * ------------------------------------------------------------------- */
 
-@import url("font-awesome/css/font-awesome.min.css");
-@import url("micons/micons.css");
-@import url("fonts.css");
-
-
-/* ===================================================================
- *  02. base style overrides - (_document-setup)
- *
- * ------------------------------------------------------------------- */
-
-html {
-  font-size: 10px;
-}
-
-@media only screen and (max-width: 1024px) {
-  html {
-    font-size: 9.375px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  html {
-    font-size: 9.375px;
-  }
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background: #141515;
-  font-family: "muli-regular", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.875;
-  color: #767676;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* ------------------------------------------------------------------- 
- * links - (_document-setup) 
- * ------------------------------------------------------------------- */
-
-a,
-a:visited {
-  color: #0087cc;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-a:hover,
-a:focus {
-  color: #39b54a;
-}
-
-
-/* ===================================================================
- *  03. typography & general theme styles - (_document-setup.scss) 
- *
- * ------------------------------------------------------------------- */
-
-h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
-  font-family: "montserrat-regular", sans-serif;
-  color: #151515;
-  font-style: normal;
-  text-rendering: optimizeLegibility;
-  margin-bottom: 2.4rem;
-}
-
-h3, .h03, h4, .h04 {
-  margin-bottom: 1.5rem;
-}
-h5, .h05, h6, .h06 {
-  margin-bottom: 1.2rem;
-}
-h1, .h01 {
-  font-size: 3.1rem;
-  line-height: 1.35;
-  letter-spacing: -.1rem;
-  
-}
-
-@media only screen and (max-width: 600px) {
-  h1,
-  .h01 {
-    font-size: 2.6rem;
-    letter-spacing: -.07rem;
-  }
-}
-
-h2, .h02 {
-  font-size: 1.6rem;
-  line-height: 1.25;
-  font-weight:  1.875;
-}
-h3, .h03 {
-  font-size: 2rem;
-  line-height: 1.5;
-}
-h4, .h04 {
-  font-size: 1.7rem;
-  line-height: 1.76;
-}
-h5, .h05 {
-  font-size: 1.4rem;
-  line-height: 1.7;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-}
-h6, .h06 {
-  font-size: 1.3rem;
-  line-height: 1.85;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-}
-
-p img {
-  margin: 0;
-}
-
-p.lead {
-  font-family: "muli-light", sans-serif;
-  font-size: 2.1rem;
-  line-height: 1.857;
-  color: #838383;
-  margin-bottom: 3.6rem;
-}
-
-@media only screen and (max-width: 768px) {
-  p.lead {
-    font-size: 2rem;
-  }
-}
-
-em, i, strong, b {
-  font-size: 1.6rem;
-  line-height: 1.875;
-  font-style: normal;
-  font-weight: normal;
-}
-em, i {
-  font-family: "muli-italic", sans-serif;
-}
-strong, b {
-  font-family: "muli-bold", sans-serif;
-}
-
-small {
-  font-size: 1.1rem;
-  line-height: inherit;
-}
-
-blockquote {
-  margin: 3rem 0;
-  padding-left: 5rem;
-  position: relative;
-}
-
-blockquote:before {
-  content: "\201C";
-  font-size: 10rem;
-  line-height: 0px;
-  margin: 0;
-  color: rgba(0, 0, 0, 0.3);
-  font-family: arial, sans-serif;
-  position: absolute;
-  top: 3.6rem;
-  left: 0;
-}
-
-blockquote p {
-  font-family: "muli-light", sans-serif;
-  padding: 0;
-  font-size: 1.9rem;
-  line-height: 1.895;
-}
-
-blockquote cite {
-  display: block;
-  font-size: 1.3rem;
-  font-style: normal;
-  line-height: 1.615;
-}
-
-blockquote cite:before {
-  content: "\2014 \0020";
-}
-
-blockquote cite a,
-blockquote cite a:visited {
-  color: #838383;
-  border: none;
-}
-
-abbr {
-  font-family: "muli-bold", sans-serif;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  letter-spacing: .05rem;
-  color: #838383;
-}
-
-var, kbd, samp, code, pre {
-  font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
-}
-
-pre {
-  padding: 2.4rem 3rem 3rem;
-  background: #F1F1F1;
-}
-
-code {
-  font-size: 1.4rem;
-  margin: 0 .2rem;
-  padding: .3rem .6rem;
-  white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
-  border-radius: 3px;
-}
-
-pre>code {
-  display: block;
-  white-space: pre;
-  line-height: 2;
-  padding: 0;
-  margin: 0;
-}
-
-pre.prettyprint>code {
-  border: none;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-  text-decoration: none;
-}
-
-mark {
-  background: #FFF49B;
-  color: #000;
-}
-
-hr {
-  border: solid rgba(0, 0, 0, 0.1);
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 2.4rem 0 1.5rem;
-  height: 0;
-}
-
-
-/* ------------------------------------------------------------------- 
- * Lists - (_document-setup.scss)  
- * ------------------------------------------------------------------- */
-
-ol {
-  list-style: decimal;
-}
-
-ul {
-  list-style: disc;
-}
-
-li {
-  display: list-item;
-}
-
-ol,
-ul {
-  margin-left: 1.7rem;
-}
-
-ul li {
-  padding-left: .4rem;
-}
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: .6rem 0 .6rem 1.7rem;
-}
-
-ul.disc li {
-  display: list-item;
-  list-style: none;
-  padding: 0 0 0 .8rem;
-  position: relative;
-}
-
-ul.disc li::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #DBB345;
-  position: absolute;
-  left: -17px;
-  top: 11px;
-  vertical-align: middle;
-}
-
-dt {
-  margin: 0;
-  color: #DBB345;
-}
-
-dd {
-  margin: 0 0 0 2rem;
-}
-
-
-/* ------------------------------------------------------------------- 
- * Spacing - (_document-setup)  
- * ------------------------------------------------------------------- */
-
-button,
-.button {
-  margin-bottom: 1.2rem;
-}
-
-fieldset {
-  margin-bottom: 1.5rem;
-}
-
-input,
-textarea,
-select,
-pre,
-blockquote,
-figure,
-table,
-p,
-ul,
-ol,
-dl,
-form,
-.fluid-video-wrapper,
-.ss-custom-select {
-  margin-bottom: 3rem;
-}
-
-
-/* ------------------------------------------------------------------- 
- * floated image - (_document-setup)  
- * ------------------------------------------------------------------- */
-
-img.pull-right {
-  margin: 1.5rem 0 0 3rem;
-}
-
-img.pull-left {
-  margin: 1.5rem 3rem 0 0;
-}
-
-
-/* ------------------------------------------------------------------- 
- * block grids paddings
- * ------------------------------------------------------------------- */
-
-.bgrid {
-  padding: 0 20px;
-}
-
-@media only screen and (max-width: 1024px) {
-  .bgrid {
-    padding: 0 18px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .bgrid {
-    padding: 0 15px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .bgrid {
-    padding: 0 10px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .bgrid {
-    padding: 0;
-  }
-}
-
-
-/* ------------------------------------------------------------------- 
- * tables - (_document-setup.scss)  
- * ------------------------------------------------------------------- */
-
-table {
-  border-width: 0;
-  width: 100%;
-  max-width: 100%;
-  font-family: "muli-regular", sans-serif;
-}
-
-th,
-td {
-  padding: 1.5rem 3rem;
-  text-align: left;
-  border-bottom: 1px solid #E8E8E8;
-}
-
-th {
-  color: #151515;
-  font-family: "montserrat-bold", sans-serif;
-}
-
-td {
-  line-height: 1.5;
-}
-
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-
-.table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-
-/* ------------------------------------------------------------------- 
- * pace.js styles - center simple  - (_document-setup.scss)
- * ------------------------------------------------------------------- */
-
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  z-index: 2000;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 5px;
-  width: 150px;
-  background: #dedede;
-  overflow: hidden;
-}
-
-.pace .pace-progress {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  max-width: 150px;
-  position: fixed;
-  z-index: 2000;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 100%;
-  height: 100%;
-  width: 100%;
-  background: #DBB345;
-}
-
-.pace.pace-inactive {
-  display: none;
-}
-
-.oldie .pace {
-  display: none;
-}
-
-
-/* ===================================================================
- *  04. preloader - (_preloader-blank.scss)
- *
- * ------------------------------------------------------------------- */
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #ffffff;
-  z-index: 800;
-  height: 100%;
-  width: 100%;
-}
-
-.no-js #preloader,
-.oldie #preloader {
-  display: none;
-}
-
-
-/* ===================================================================
- *  05. forms - (_forms.scss)
- *
- * ------------------------------------------------------------------- */
-
-fieldset {
-  border: none;
-}
-
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea,
-select {
-  display: block;
-  height: 6rem;
-  padding: 1.5rem 2rem;
-  border: 0;
-  outline: none;
-  color: #333333;
-  font-family: "muli-regular", sans-serif;
-  font-size: 1.5rem;
-  line-height: 3rem;
-  max-width: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  border-radius: 5px;
-}
-
-.ss-custom-select {
-  position: relative;
-  padding: 0;
-}
-
-.ss-custom-select select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  text-indent: 0.01px;
-  text-overflow: '';
-  margin: 0;
-  line-height: 3rem;
-  vertical-align: middle;
-}
-
-.ss-custom-select select option {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.ss-custom-select select::-ms-expand {
-  display: none;
-}
-
-.ss-custom-select::after {
-  content: '\f0d7';
-  font-family: 'FontAwesome';
-  position: absolute;
-  top: 50%;
-  right: 1.5rem;
-  margin-top: -10px;
-  bottom: auto;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 18px;
-  text-align: center;
-  pointer-events: none;
-  color: #252525;
-}
-
-
-/* IE9 and below */
-
-.oldie .ss-custom-select::after {
-  display: none;
-}
-
-textarea {
-  min-height: 15rem;
-}
-
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-  color: #000000;
-}
-
-label,
-legend {
-  font-family: "montserrat-bold", sans-serif;
-  font-size: 1.4rem;
-  margin-bottom: .6rem;
-  color: #151515;
-  display: block;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline;
-}
-
-label>.label-text {
-  display: inline-block;
-  margin-left: 1rem;
-  font-family: "montserrat-regular", sans-serif;
-  line-height: inherit;
-}
-
-label>input[type="checkbox"],
-label>input[type="radio"] {
-  margin: 0;
-  position: relative;
-  top: .15rem;
-}
-
-
-/* ------------------------------------------------------------------- 
- * Style Placeholder Text - (_forms.scss)
- * ------------------------------------------------------------------- */
-
-::-webkit-input-placeholder {
-  color: #838383;
-}
-
-:-moz-placeholder {
-  color: #838383;
-  /* Firefox 18- */
-}
-
-::-moz-placeholder {
-  color: #838383;
-  /* Firefox 19+ */
-}
-
-:-ms-input-placeholder {
-  color: #838383;
-}
-
-.placeholder {
-  color: #838383 !important;
-}
-
-
-/* ------------------------------------------------------------------- 
- * Change Autocomplete styles in Chrome - (_forms.scss)
- * ------------------------------------------------------------------- */
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus input:-webkit-autofill,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: none;
-  -webkit-text-fill-color: #DBB345;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-
-
-/* ===================================================================
- *  06. buttons - (_button-essentials.scss)
- *
- * ------------------------------------------------------------------- */
-
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  font-family: "montserrat-regular", sans-serif;
-  font-size: 1.5rem;
-  height: 5.4rem;
-  line-height: calc(5.4rem - .6rem);
-  padding: 0 3rem;
-  margin: 0 .3rem 1.2rem 0;
-  color: #222222;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
-  border-radius: .5rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #c5c5c5;
-  border: .3rem solid #c5c5c5;
-}
-
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  background-color: #b8b8b8;
-  border-color: #b8b8b8;
-  color: #000000;
-  outline: 0;
-}
-
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  background-color: #DBB345;
-  border-color: #DBB345;
-  color: #FFFFFF;
-}
-
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  background: #ffffff;
-  border-color: #DBB345;
-  color: #DBB345
-}
-
-button.full-width,
-.button.full-width {
-  width: 100%;
-  margin-right: 0;
-}
-
-button.medium,
-.button.medium {
-  height: 5.7rem !important;
-  line-height: calc(5.7rem - .6rem) !important;
-}
-
-button.large,
-.button.large {
-  height: 4rem !important;
-  line-height: calc(4rem - .4rem) !important;
-}
-
-button.stroke,
-.button.stroke {
-  background: transparent !important;
-  color: #a5a5a5 !important;
-}
-
-button.stroke:hover,
-.button.stroke:hover {
-  border: 0.3rem solid #DBB345;
-  color: #DBB345;
-}
-
-button.pill,
-.button.pill {
-  padding-left: 3rem !important;
-  padding-right: 3rem !important;
-  border-radius: 1000px;
-}
-
-button::-moz-focus-inner,
+ @import url("font-awesome/css/font-awesome.min.css");
+ @import url("micons/micons.css");
+ @import url("fonts.css");
+ 
+ 
+ /* ===================================================================
+  *  02. base style overrides - (_document-setup)
+  *
+  * ------------------------------------------------------------------- */
+ 
+ html {
+   font-size: 10px;
+ }
+ 
+ @media only screen and (max-width: 1024px) {
+   html {
+     font-size: 9.375px;
+   }
+ }
+ 
+ @media only screen and (max-width: 768px) {
+   html {
+     font-size: 10px;
+   }
+ }
+ 
+ @media only screen and (max-width: 400px) {
+   html {
+     font-size: 9.375px;
+   }
+ }
+ 
+ html,
+ body {
+   height: 100%;
+ }
+ 
+ body {
+   background: #141515;
+   font-family: "muli-regular", sans-serif;
+   font-size: 1.6rem;
+   line-height: 1.875;
+   color: #767676;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * links - (_document-setup) 
+  * ------------------------------------------------------------------- */
+ 
+ a,
+ a:visited {
+   color: #0087cc;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+ a:hover,
+ a:focus {
+   color: #39b54a;
+ }
+ 
+ 
+ /* ===================================================================
+  *  03. typography & general theme styles - (_document-setup.scss) 
+  *
+  * ------------------------------------------------------------------- */
+ 
+ h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
+   font-family: "montserrat-regular", sans-serif;
+   color: #151515;
+   font-style: normal;
+   text-rendering: optimizeLegibility;
+   margin-bottom: 2.4rem;
+ }
+ 
+ h3, .h03, h4, .h04 {
+   margin-bottom: 1.5rem;
+ }
+ h5, .h05, h6, .h06 {
+   margin-bottom: 1.2rem;
+ }
+ h1, .h01 {
+   font-size: 3.1rem;
+   line-height: 1.35;
+   letter-spacing: -.1rem;
+   
+ }
+ 
+ @media only screen and (max-width: 600px) {
+   h1,
+   .h01 {
+     font-size: 2.6rem;
+     letter-spacing: -.07rem;
+   }
+ }
+ 
+ h2, .h02 {
+   font-size: 1.6rem;
+   line-height: 1.25;
+   font-weight:  1.875;
+ }
+ h3, .h03 {
+   font-size: 2rem;
+   line-height: 1.5;
+ }
+ h4, .h04 {
+   font-size: 1.7rem;
+   line-height: 1.76;
+ }
+ h5, .h05 {
+   font-size: 1.4rem;
+   line-height: 1.7;
+   text-transform: uppercase;
+   letter-spacing: .2rem;
+ }
+ h6, .h06 {
+   font-size: 1.3rem;
+   line-height: 1.85;
+   text-transform: uppercase;
+   letter-spacing: .2rem;
+ }
+ 
+ p img {
+   margin: 0;
+ }
+ 
+ p.lead {
+   font-family: "muli-light", sans-serif;
+   font-size: 2.1rem;
+   line-height: 1.857;
+   color: #838383;
+   margin-bottom: 3.6rem;
+ }
+ 
+ @media only screen and (max-width: 768px) {
+   p.lead {
+     font-size: 2rem;
+   }
+ }
+ 
+ em, i, strong, b {
+   font-size: 1.6rem;
+   line-height: 1.875;
+   font-style: normal;
+   font-weight: normal;
+ }
+ em, i {
+   font-family: "muli-italic", sans-serif;
+ }
+ strong, b {
+   font-family: "muli-bold", sans-serif;
+ }
+ 
+ small {
+   font-size: 1.1rem;
+   line-height: inherit;
+ }
+ 
+ blockquote {
+   margin: 3rem 0;
+   padding-left: 5rem;
+   position: relative;
+ }
+ 
+ blockquote:before {
+   content: "\201C";
+   font-size: 10rem;
+   line-height: 0px;
+   margin: 0;
+   color: rgba(0, 0, 0, 0.3);
+   font-family: arial, sans-serif;
+   position: absolute;
+   top: 3.6rem;
+   left: 0;
+ }
+ 
+ blockquote p {
+   font-family: "muli-light", sans-serif;
+   padding: 0;
+   font-size: 1.9rem;
+   line-height: 1.895;
+ }
+ 
+ blockquote cite {
+   display: block;
+   font-size: 1.3rem;
+   font-style: normal;
+   line-height: 1.615;
+ }
+ 
+ blockquote cite:before {
+   content: "\2014 \0020";
+ }
+ 
+ blockquote cite a,
+ blockquote cite a:visited {
+   color: #838383;
+   border: none;
+ }
+ 
+ abbr {
+   font-family: "muli-bold", sans-serif;
+   font-variant: small-caps;
+   text-transform: lowercase;
+   letter-spacing: .05rem;
+   color: #838383;
+ }
+ 
+ var, kbd, samp, code, pre {
+   font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+ }
+ 
+ pre {
+   padding: 2.4rem 3rem 3rem;
+   background: #F1F1F1;
+ }
+ 
+ code {
+   font-size: 1.4rem;
+   margin: 0 .2rem;
+   padding: .3rem .6rem;
+   white-space: nowrap;
+   background: #F1F1F1;
+   border: 1px solid #E1E1E1;
+   border-radius: 3px;
+ }
+ 
+ pre>code {
+   display: block;
+   white-space: pre;
+   line-height: 2;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ pre.prettyprint>code {
+   border: none;
+ }
+ 
+ del {
+   text-decoration: line-through;
+ }
+ 
+ abbr[title],
+ dfn[title] {
+   border-bottom: 1px dotted;
+   cursor: help;
+   text-decoration: none;
+ }
+ 
+ mark {
+   background: #FFF49B;
+   color: #000;
+ }
+ 
+ hr {
+   border: solid rgba(0, 0, 0, 0.1);
+   border-width: 1px 0 0;
+   clear: both;
+   margin: 2.4rem 0 1.5rem;
+   height: 0;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * Lists - (_document-setup.scss)  
+  * ------------------------------------------------------------------- */
+ 
+ ol {
+   list-style: decimal;
+ }
+ 
+ ul {
+   list-style: disc;
+ }
+ 
+ li {
+   display: list-item;
+ }
+ 
+ ol,
+ ul {
+   margin-left: 1.7rem;
+ }
+ 
+ ul li {
+   padding-left: .4rem;
+ }
+ 
+ ul ul,
+ ul ol,
+ ol ol,
+ ol ul {
+   margin: .6rem 0 .6rem 1.7rem;
+ }
+ 
+ ul.disc li {
+   display: list-item;
+   list-style: none;
+   padding: 0 0 0 .8rem;
+   position: relative;
+ }
+ 
+ ul.disc li::before {
+   content: "";
+   display: inline-block;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: #DBB345;
+   position: absolute;
+   left: -17px;
+   top: 11px;
+   vertical-align: middle;
+ }
+ 
+ dt {
+   margin: 0;
+   color: #DBB345;
+ }
+ 
+ dd {
+   margin: 0 0 0 2rem;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * Spacing - (_document-setup)  
+  * ------------------------------------------------------------------- */
+ 
+ button,
+ .button {
+   margin-bottom: 1.2rem;
+ }
+ 
+ fieldset {
+   margin-bottom: 1.5rem;
+ }
+ 
+ input,
+ textarea,
+ select,
+ pre,
+ blockquote,
+ figure,
+ table,
+ p,
+ ul,
+ ol,
+ dl,
+ form,
+ .fluid-video-wrapper,
+ .ss-custom-select {
+   margin-bottom: 3rem;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * floated image - (_document-setup)  
+  * ------------------------------------------------------------------- */
+ 
+ img.pull-right {
+   margin: 1.5rem 0 0 3rem;
+ }
+ 
+ img.pull-left {
+   margin: 1.5rem 3rem 0 0;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * block grids paddings
+  * ------------------------------------------------------------------- */
+ 
+ .bgrid {
+   padding: 0 20px;
+ }
+ 
+ @media only screen and (max-width: 1024px) {
+   .bgrid {
+     padding: 0 18px;
+   }
+ }
+ 
+ @media only screen and (max-width: 768px) {
+   .bgrid {
+     padding: 0 15px;
+   }
+ }
+ 
+ @media only screen and (max-width: 600px) {
+   .bgrid {
+     padding: 0 10px;
+   }
+ }
+ 
+ @media only screen and (max-width: 400px) {
+   .bgrid {
+     padding: 0;
+   }
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * tables - (_document-setup.scss)  
+  * ------------------------------------------------------------------- */
+ 
+ table {
+   border-width: 0;
+   width: 100%;
+   max-width: 100%;
+   font-family: "muli-regular", sans-serif;
+ }
+ 
+ th,
+ td {
+   padding: 1.5rem 3rem;
+   text-align: left;
+   border-bottom: 1px solid #E8E8E8;
+ }
+ 
+ th {
+   color: #151515;
+   font-family: "montserrat-bold", sans-serif;
+ }
+ 
+ td {
+   line-height: 1.5;
+ }
+ 
+ th:first-child,
+ td:first-child {
+   padding-left: 0;
+ }
+ 
+ th:last-child,
+ td:last-child {
+   padding-right: 0;
+ }
+ 
+ .table-responsive {
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * pace.js styles - center simple  - (_document-setup.scss)
+  * ------------------------------------------------------------------- */
+ 
+ .pace {
+   -webkit-pointer-events: none;
+   pointer-events: none;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   user-select: none;
+   z-index: 2000;
+   position: fixed;
+   margin: auto;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: 5px;
+   width: 150px;
+   background: #dedede;
+   overflow: hidden;
+ }
+ 
+ .pace .pace-progress {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   -o-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+   max-width: 150px;
+   position: fixed;
+   z-index: 2000;
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 100%;
+   height: 100%;
+   width: 100%;
+   background: #DBB345;
+ }
+ 
+ .pace.pace-inactive {
+   display: none;
+ }
+ 
+ .oldie .pace {
+   display: none;
+ }
+ 
+ 
+ /* ===================================================================
+  *  04. preloader - (_preloader-blank.scss)
+  *
+  * ------------------------------------------------------------------- */
+ 
+ #preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: #ffffff;
+   z-index: 800;
+   height: 100%;
+   width: 100%;
+ }
+ 
+ .no-js #preloader,
+ .oldie #preloader {
+   display: none;
+ }
+ 
+ 
+ /* ===================================================================
+  *  05. forms - (_forms.scss)
+  *
+  * ------------------------------------------------------------------- */
+ 
+ fieldset {
+   border: none;
+ }
+ 
+ input[type="email"],
+ input[type="number"],
+ input[type="search"],
+ input[type="text"],
+ input[type="tel"],
+ input[type="url"],
+ input[type="password"],
+ textarea,
+ select {
+   display: block;
+   height: 6rem;
+   padding: 1.5rem 2rem;
+   border: 0;
+   outline: none;
+   color: #333333;
+   font-family: "muli-regular", sans-serif;
+   font-size: 1.5rem;
+   line-height: 3rem;
+   max-width: 100%;
+   background: rgba(0, 0, 0, 0.1);
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   border-radius: 5px;
+ }
+ 
+ .ss-custom-select {
+   position: relative;
+   padding: 0;
+ }
+ 
+ .ss-custom-select select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   -o-appearance: none;
+   appearance: none;
+   text-indent: 0.01px;
+   text-overflow: '';
+   margin: 0;
+   line-height: 3rem;
+   vertical-align: middle;
+ }
+ 
+ .ss-custom-select select option {
+   padding-left: 2rem;
+   padding-right: 2rem;
+ }
+ 
+ .ss-custom-select select::-ms-expand {
+   display: none;
+ }
+ 
+ .ss-custom-select::after {
+   content: '\f0d7';
+   font-family: 'FontAwesome';
+   position: absolute;
+   top: 50%;
+   right: 1.5rem;
+   margin-top: -10px;
+   bottom: auto;
+   width: 20px;
+   height: 20px;
+   line-height: 20px;
+   font-size: 18px;
+   text-align: center;
+   pointer-events: none;
+   color: #252525;
+ }
+ 
+ 
+ /* IE9 and below */
+ 
+ .oldie .ss-custom-select::after {
+   display: none;
+ }
+ 
+ textarea {
+   min-height: 15rem;
+ }
+ 
+ input[type="email"]:focus,
+ input[type="number"]:focus,
+ input[type="search"]:focus,
+ input[type="text"]:focus,
+ input[type="tel"]:focus,
+ input[type="url"]:focus,
+ input[type="password"]:focus,
+ textarea:focus,
+ select:focus {
+   color: #000000;
+ }
+ 
+ label,
+ legend {
+   font-family: "montserrat-bold", sans-serif;
+   font-size: 1.4rem;
+   margin-bottom: .6rem;
+   color: #151515;
+   display: block;
+ }
+ 
+ input[type="checkbox"],
+ input[type="radio"] {
+   display: inline;
+ }
+ 
+ label>.label-text {
+   display: inline-block;
+   margin-left: 1rem;
+   font-family: "montserrat-regular", sans-serif;
+   line-height: inherit;
+ }
+ 
+ label>input[type="checkbox"],
+ label>input[type="radio"] {
+   margin: 0;
+   position: relative;
+   top: .15rem;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * Style Placeholder Text - (_forms.scss)
+  * ------------------------------------------------------------------- */
+ 
+ ::-webkit-input-placeholder {
+   color: #838383;
+ }
+ 
+ :-moz-placeholder {
+   color: #838383;
+   /* Firefox 18- */
+ }
+ 
+ ::-moz-placeholder {
+   color: #838383;
+   /* Firefox 19+ */
+ }
+ 
+ :-ms-input-placeholder {
+   color: #838383;
+ }
+ 
+ .placeholder {
+   color: #838383 !important;
+ }
+ 
+ 
+ /* ------------------------------------------------------------------- 
+  * Change Autocomplete styles in Chrome - (_forms.scss)
+  * ------------------------------------------------------------------- */
+ 
+ input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus input:-webkit-autofill,
+ textarea:-webkit-autofill,
+ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+ select:-webkit-autofill,
+ select:-webkit-autofill:hover,
+ select:-webkit-autofill:focus {
+   border: none;
+   -webkit-text-fill-color: #DBB345;
+   transition: background-color 5000s ease-in-out 0s;
+ }
+ 
+ 
+ 
+ /* ===================================================================
+  *  06. buttons - (_button-essentials.scss)
+  *
+  * ------------------------------------------------------------------- */
+ 
+ .button,
+ button,
+ input[type="submit"],
+ input[type="reset"],
+ input[type="button"] {
+   display: inline-block;
+   font-family: "montserrat-regular", sans-serif;
+   font-size: 1.5rem;
+   height: 5.4rem;
+   line-height: calc(5.4rem - .6rem);
+   padding: 0 3rem;
+   margin: 0 .3rem 1.2rem 0;
+   color: #222222;
+   text-decoration: none;
+   cursor: pointer;
+   text-align: center;
+   white-space: nowrap;
+   border-radius: .5rem;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   background-color: #c5c5c5;
+   border: .3rem solid #c5c5c5;
+ }
+ 
+ .button:hover,
+ button:hover,
+ input[type="submit"]:hover,
+ input[type="reset"]:hover,
+ input[type="button"]:hover,
+ .button:focus,
+ button:focus,
+ input[type="submit"]:focus,
+ input[type="reset"]:focus,
+ input[type="button"]:focus {
+   background-color: #b8b8b8;
+   border-color: #b8b8b8;
+   color: #000000;
+   outline: 0;
+ }
+ 
+ .button.button-primary,
+ button.button-primary,
+ input[type="submit"].button-primary,
+ input[type="reset"].button-primary,
+ input[type="button"].button-primary {
+   background-color: #DBB345;
+   border-color: #DBB345;
+   color: #FFFFFF;
+ }
+ 
+ .button.button-primary:hover,
+ button.button-primary:hover,
+ input[type="submit"].button-primary:hover,
+ input[type="reset"].button-primary:hover,
+ input[type="button"].button-primary:hover,
+ .button.button-primary:focus,
+ button.button-primary:focus,
+ input[type="submit"].button-primary:focus,
+ input[type="reset"].button-primary:focus,
+ input[type="button"].button-primary:focus {
+   background: #ffffff;
+   border-color: #DBB345;
+   color: #DBB345
+ }
+ 
+ button.full-width,
+ .button.full-width {
+   width: 100%;
+   margin-right: 0;
+ }
+ 
+ button.medium,
+ .button.medium {
+   height: 5.7rem !important;
+   line-height: calc(5.7rem - .6rem) !important;
+ }
+ 
+ button.large,
+ .button.large {
+   height: 4rem !important;
+   line-height: calc(4rem - .4rem) !important;
+ }
+ 
+ button.stroke,
+ .button.stroke {
+   background: transparent !important;
+   color: #a5a5a5 !important;
+ }
+ 
+ button.stroke:hover,
+ .button.stroke:hover {
+   border: 0.3rem solid #DBB345;
+   color: #DBB345;
+ }
+ 
+ button.pill,
+ .button.pill {
+   padding-left: 3rem !important;
+   padding-right: 3rem !important;
+   border-radius: 1000px;
+ }
+
+ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -2879,7 +2879,7 @@ footer ul a:visited {
 }
 
 #blog-section {
-  padding: 50px 50px; /* Espaço superior e inferior */
+  padding-top: 50px; /* Espaço superior e inferior */
   background-color: #ffffff; /* Cor de fundo da seção */
 }
 
@@ -3060,7 +3060,20 @@ button:hover {
   color: #DBB345;
 }
 
-  body {
+
+Dito pelo ChatGPT:
+Parece que o código foi cortado no final. Você quer que eu revise algo específico ou precisa de ajuda para completar alguma parte? 🚀
+
+
+
+
+
+
+
+Dito por si:
+CSS PARTE 5
+
+ body {
   height: 100%; /* Garante que o body e html ocupem 100% da altura da viewport */
   margin: 0; /* Remove margens padrão */
   height: 100vh; /* Faz o body ocupar toda a altura da viewport */
@@ -3393,5 +3406,21 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Garantir que o footer fique na parte inferior da página */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Garantir que o conteúdo acima do footer não o empurre para baixo */
+body {
+  margin-bottom: 60px; /* Ajuste conforme necessário */
 }
 
